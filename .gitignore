@@ -57,3 +57,4 @@ Temporary Items
 *.sql
 *.sqlite
 /target/
+.settings/
