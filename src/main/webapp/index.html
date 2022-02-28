@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Front and Back Ending</title>
+      <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+      <!-- Don't use this in production: -->
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      <script type="text/javascript" src="js/tabs.js"></script>
+      <link rel="stylesheet" href=css/tabs.css>
+      <link rel="stylesheet" href=css/mediaLink.css>
+      <link rel="stylesheet" href=css/tableFont.css>
+      <link rel="stylesheet" href=css/paragraphStyle.css>
+      <!-- Add icon library -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         .parallax {
+         /* The image used */
+         background-image: url("images/loofSmile.jpeg");
+         /* Set a specific height */
+         min-height: 500px; 
+         /* Create the parallax scrolling effect */
+         background-attachment: fixed;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: 65%;
+         }.myDIV {
+         border: 1px solid black;
+         color: #f1f1f1;
+         padding: 50px;
+         background-color: lightblue;
+         border-radius: 50px;
+         width: 270px;
+         height: 200px;
+         overflow: auto;
+         font-family: Comic Sans MS, Comic Sans, cursive;
+         font-family: Comic Sans MS, Comic Sans, cursive;
+         }
+         .myDIV:hover {
+         background-color: coral;
+         width: 600px;
+         height: 600x;
+         padding: 100px;
+         border-radius: 70px;
+         font-family: Comic Sans MS, Comic Sans, cursive;
+         font-family: Comic Sans MS, Comic Sans, cursive;
+         color: black; 
+         margin: auto;
+         }
+         .aspectwrapper {
+         display: inline-block; /* shrink to fit */
+         width: 100%;           /* whatever width you like */
+         position: center;    /* so .content can use position: absolute */
+         }
+         .aspectwrapper::after {
+         padding-top: 56.25%; /* percentage of containing block _width_ */
+         display: block;
+         content: '';
+         }
+         .tableDIV {
+         border: 1px solid black;
+         color: #f1f1f1;
+         padding: 50px;
+         background-color: #000000;
+         border-radius: 50px;
+         width: 10px;
+         height: 10px;
+         overflow: auto;
+         font-family: Comic Sans MS, Comic Sans, cursive;
+         font-family: Comic Sans MS, Comic Sans, cursive;
+         margin: auto;
+         }
+         .tableDIV:hover {
+         background-color: white;
+         width: 700px;
+         height: 700x;
+         padding: 50px;
+         border-radius: 50px;
+         font-family: Comic Sans MS, Comic Sans, cursive;
+         font-family: Comic Sans MS, Comic Sans, cursive;
+         color: black; 
+         margin: auto;
+         }
+         .center {
+         width:70%; 
+         margin-left:15%; 
+         margin-right:15%;
+         }
+         .IMGcenter {
+         width: 45%;
+         height: 45%;
+         border-radius: 50%;
+         }
+         body {text-align:center;}
+      </style>
+   </head>
+   <body>
+      <div class ="aspectwrapper">
+         <!-- Tab links -->
+         <div class="tab">
+            <button class="tablinks"  style="font-size: 18px; font-family: Courier New, monospace" onclick="openCity(event, 'HOME')">Home</button>
+            <button class="tablinks"  style="font-size: 18px; font-family: Courier New, monospace" onclick="openCity(event, 'London')">Who Am I</button>
+            <button class="tablinks"  style="font-size: 18px; font-family: Courier New, monospace" onclick="openCity(event, 'Paris')">API</button>
+            <button class="tablinks"  style="font-size: 18px; font-family: Courier New, monospace" onclick="openCity(event, 'Tokyo')">Projects/Inventions</button>
+         </div>
+         <!-- Tab content -->
+         <div id="Home" class="tabContent"></div>
+         <div id="London" class="tabcontent">
+            <div class="tableDIV">
+               <table class="center">
+                  <tr>
+                     <th style="font-size: 20px; font-family: Courier New, monospace">Developer</th>
+                     <th style="font-size: 20px; font-family: Courier New, monospace">Gamer    </th>
+                     <th style="font-size: 20px; font-family: Courier New, monospace">Athlete </th>
+                  </tr>
+                  <tr>
+                     <td> <a href="https://www.linkedin.com/in/malik-white-a439a8163/" target="_blank" class="fa fa-linkedin"></a></td>
+                     <td><a href="https://www.youtube.com/user/TheSneakyBlueCoon" target="_blank" class="fa fa-youtube"></a></td>
+                     <td><a href="https://www.youtube.com/watch?v=gVFt94sk1NE" target="_blank" class="fa fa-youtube"> </a></td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <div style ="border-radius: 50%"> <img class="IMGcenter" src="images/LowF.jpeg" /> </div>
+                     </td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+         <div id="Paris" class="tabcontent">
+            <div style="font-family: Comic Sans MS, Comic Sans, cursive;font-size: 18px; text-align: center">This week a  new quotes API
+            </div>
+            <!-- <a href="NASA">Click to call Servlet</a>  -->
+            <div> <button> Click For Quote </button></div>
+         </div>
+         <div id="Tokyo" class="tabcontent">
+            <div style="font-family: Comic Sans MS, Comic Sans, cursive;font-size: 18px; text-align: center">Step into the Future with me !!!
+            </div>
+            <div style = "text-align:right"><a href="https://thesoxialclub.io/" target="_blank" class="">Click Here For More Info</a></div>
+         </div>
+         <div class="parallax"></div>
+         <div style="height:500px;background-color:#f1f1f1;font-size:32px; font-family: Courier New, monospace">
+            "The only constant in life is change." --Andru Branch 
+            <div class="myDIV"> I decided to create this website to showcase some my basic skill and interests. I have always had an interest in creating/ engineering and overall creativity but I have been further inspired by my loved ones to act more on my natural talents and interests.
+               I hope you find the things I do here interesting and continue to follow for what will be in store for the near future.
+            </div>
+            <div style = "text-align: center; font-size: 14px; color: white">  <a  href="https://www.twitch.tv/l0ewki_" target="_blank">Click to see my Twitch Page.</a></div>
+         </div>
+      </div>
+   </body>
+   <footer>
+      <button>Surprise?</button>
+   </footer>
+</html>
